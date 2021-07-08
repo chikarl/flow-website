@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/Flow Logo/Flow favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Fvp7ysBMDY844wcd9pliJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_ksl3lca', 'contact_form', this)
+                    .then(function() {
+                        window.alert('Message was sent Successfully 😊');
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header id="home">
+        <nav class="nav"> 
+            <div class="nav-menu d-flex">
+                <div class="nav-brand">
+                    <a href="#" class="text-gray"><img src="./img/Flow Logo/Flow Logo.png" alt=""></a>
+                </div>
+                <div class="toggle-collapse">
+                    <div class="toggle-icons">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div>
+                    <ul class="nav-items">
+                        <li class="nav-link">
+                            <a href="#home">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#features">Features</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#team">Team</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+       </nav>
+       
+        <div class="app">
+            <div class="app-info">
+                <h2>Just go with the Flow </h2>
+                <P> Flow is a community mobile app that helps students around the University of Bamenda in Bambili find and locate clean water sources
+                </P>
+                <div class="btn">
+                    <button class="btn"><a href="https://drive.google.com/file/d/1oXVm0yTYVrzsTvPK6gSuuoFBS5v3udCI/view"><div><i class="fab fa-google-play fa-2x"></i></div>  Download now</a></button>
+                    <button class="btn-ios"><i class="fab fa-app-store fa-2x"></i> <div>coming soon on ios</div></button>
+                </div>
+            </div>
+            <div class="app-img">
+                <img src="./img/flow Galaxy S20 Ultra 2.png" alt=" header Img">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="features" id="features">
+            <div class="container">
+                <div class="features-title">
+                    <h2>App Features</h2>
+                    <p>Below are some of the features inbuild into the app.</p>
+                </div>
+                <div class="features">
+                    <div class="features-item left">
+                        <div class="features-info">
+                            <div class="features-icon">
+                                <i class="fas fa-search-location fa-3x"></i>
+                            </div>
+                            <div class="features-text">
+                                <h3>View water source</h3>
+                                <p>The view water source feature displays all the water sources in the community on the map.  </p>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <div class="features-icon">
+                                <i class="fas fa-thumbtack fa-3x"></i>
+                            </div>
+                            <div class="features-text">
+                                <h3>Save Functionality</h3>
+                                <p>Students are able to save any water source the will like to take note of. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-img">
+                        <img src="./img/Collage mockup.png" alt="Features Img">
+                    </div>
+                    <div class="features-item">
+                        <div class="features-info">
+                            <div class="features-icon">
+                                <i class="fas fa-directions fa-3x"></i>
+                            </div>
+                            <div class="features-text">
+                                <h3>Directions</h3>
+                                <p>Directions from a students current location to any water source on the map can be gotten.</p>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <div class="features-icon">
+                                <i class="fas fa-calculator fa-3x"></i>
+                            </div>
+                            <div class="features-text">
+                                <h3>Calculate Distance</h3>
+                                <p>The distance from a users current location to a particular water source on the map can be calculated and displayed on the map.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about app">
+                <div class="about-img">
+                    <!--<iframe  src="https://www.youtube.com/embed/A2BD0AWpnPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+                    <img src="./img/Flow Logo/Flow favicon.png" alt="">-->
+                    <video class="video" controls>
+                        <source src="./flow video.mp4" c>
+                    </video>
+                </div>
+                <div class="about-info">
+                    <h2>About Flow</h2>
+                    <p>Flow came about as a result of the persistent water crises in Bambili, Cameroon. This is the location of the University of Bamenda in the
+                        North West Region of Cameroon. Due to the high influx of people(students) into this locality, water shortages have been the order of 
+                        the day. The water is being rationed to ensure everybody gets water (unfortunately not everyone gets water as there are times some areas 
+                        go weeks without water). Let's consider two locations in Bambili A and B. As a result of the overpopulation leading to
+                         water shortage, there could be water today at A and maybe tomorrow at B. The next day there might be no water at at A 
+                         and B forcing students to go to say another location, C in search of water. Chances are there might be no water at C
+                          and now the students will be forced to go to D. Bottom line nobody knows where exactly water is flowing neither does
+                           evrybody know all the possible locations of getting water in Bambili. There are locations which go days or weeks 
+                           without water; it's very difficult especially for new people in the community to find water. This is where flow 
+                           comes in to save the day!.</p>
+                            <button><a href="https://github.com/Developer-Student-Clubs-UBa/Flow.git" target="_blank"> <i class="fab fa-github"></i> GitHub Page</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="steps">
+                
+                <div class="steps-title">
+                    <h2>How to use Flow</h2>
+                    <p>Once the app has been downloaded you can follow the following steps and go with the Flow!</p>
+                </div>
+                <div>
+                    <div>
+                        <div class="step-icon">1</div>
+                        <div class="step-info g-grid">
+                            <div>
+                                <img src="./img/step1.png" alt="">
+                            </div>
+                            <div>
+                                <p> The first thing you need to do is to allow flow access your location service.This is done under  your device settings.
+                                     </p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                    <div class="step-icon">2</div>
+                    <div class="step-info g-grid">
+                        <div>
+                            <img src="./img/step2.png" alt="">
+                        </div>
+                        <div>
+                            <p>Immeaditely you open the app the home screen loads with a map showing all the water source locations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="step-icon">3</div>
+                    <div class="step-info g-grid">
+                        <div>
+                            <img src="./img/step3.png" alt="">
+                        </div>
+                        <div>
+                            <p>Click on a location to get information about that water source 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="step-icon">4</div>
+                    <div class="step-info g-grid">
+                        <div>
+                            <img src="./img/step4.png" alt="">
+                        </div>
+                        <div>
+                            <p> Click on get Directions to enable you navigate to that water source
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="team" id="team">
+            
+            <div class="team">
+                <div class="features-title">
+                    <h2>Our Team</h2>
+                    <p> </p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span></span>
+                        <img src="./img/ida.jpg" alt="Img of Ida" width="100%" height="100%">
+                    </div>
+                    <div class="col aline">
+                        <h3>Ida Delphine</h3>
+                        <p>Developer</p>
+                        <div class="social-links">
+                            <a href="https://github.com/Idadelveloper" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/meh_ida" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/meh-mbeh-ida-delphine-a40b21177" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span></span>
+                        <img src="./img/brandone.jpg" alt="Img of Brandone">
+                    </div>
+                    <div class="col aline">
+                        <h3>Alouzeh Brandone</h3>
+                        <p>DataAnalyst</p>
+                        <div class="social-links">
+                            <a href="https://github.com/bernadez" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/AlouzehB" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/alouzeh-mahbuh-a963811ab" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col aline">
+                        <h3>Nuikweh Lewis</h3>
+                        <p>UI/UX Designer / Dev</p>
+                        <div class="social-links">
+                            <a href="https://github.com/nuilewis" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/chi_karl" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="arrow"></span>
+                        <img src="./img/lewis.jpg" alt="Img of Lewis" width="100%" height="100%">
+                    </div>
+                    <div class="col aline">
+                        <h3>Chi Karl Junior</h3>
+                        <p>Web Developer</p>
+                        <div class="social-links">
+                            <a href="https://github.com/chikarl" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/chi_karl" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="tel: +237672734872"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="arrow"></span>
+                        <img src="./img/chi.jpg" alt="Img of Chi Karl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <div class="contact">
+                <div class="contact-info">
+                    <h2>Contact us</h2>
+                    <p>IF you have any Problem or suggestion contact us 
+                </div>
+                
+                <div class="contact_form">
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number">
+                        <label>Name</label> <br>
+                        <input type="text" name="user_name"><br>
+                        <label>Email</label><br>
+                        <input type="email" name="user_email"><br>
+                        <label>Message</label><br>
+                        <textarea name="message"></textarea><br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+            <div class="contact-bg">
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="foooter">
+            <p>&#169<a href="#">Google Developer StudentClub UBa</a></p>
+        </div>
+    </footer>
+</body>
+<script>
+    var nav = document.getElementById('navlist');
+    function toggleNav () {       
+        if ( nav.style.display === "" )
+        nav.style.display = "block";
+
+        else
+        nav.style.display = "";
+    }
+    function windowResizeHandler () {
+        if ( screen.width > 500 )
+        nav.style.display = "";
+    }
+    window.addEventListener("resize", windowResizeHandler);
+</script>
+<script src="./jquery3.4.1.min.js"></script>
+    <!--custom js file-->
+    <script src="./main.js"></script>
+</html>

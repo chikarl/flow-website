@@ -7,9 +7,7 @@
     <title>Flow</title>
     <link rel="shortcut icon" type="image/x-icon" href="./img/Flow Logo/Flow favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/all.css">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -35,57 +33,65 @@
             });
         }
     </script>
+
 </head>
 <body>
     <header id="home">
-        <nav class="nav"> 
-            <div class="nav-menu d-flex">
-                <div class="nav-brand">
-                    <a href="#" class="text-gray"><img src="./img/Flow Logo/Flow Logo.png" alt=""></a>
-                </div>
-                <div class="toggle-collapse">
-                    <div class="toggle-icons">
+        <!-- navbar -->
+        <nav id="nav">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <h1 class="logo"><img src="./img/Flow Logo/Flow Logo.png" alt=""></h1>
+                    <button class="nav-toggle">
                         <i class="fas fa-bars"></i>
-                    </div>
+                    </button>
                 </div>
-                <div>
-                    <ul class="nav-items">
-                        <li class="nav-link">
-                            <a href="#home">Home</a>
+                <!-- links -->
+                <div class="links-container">
+                    <ul class="links">
+                        <li>
+                            <a href="#home" class="scroll-link">home</a>
                         </li>
-                        <li class="nav-link">
-                            <a href="#features">Features</a>
+                        <li>
+                            <a href="#features" class="scroll-link">features</a>
                         </li>
-                        <li class="nav-link">
-                            <a href="#about">About</a>
+                        <li>
+                            <a href="#about" class="scroll-link">about</a>
                         </li>
-                        <li class="nav-link">
-                            <a href="#team">Team</a>
+                        <li>
+                            <a href="#team" class="scroll-link">team</a>
                         </li>
-                        <li class="nav-link">
-                            <a href="#contact-us">Contact</a>
+                        <li>
+                            <a href="#contact" class="scroll-link">contact </a>
                         </li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
-       </nav>
-       
-        <div class="app">
-            <div class="app-info">
-                <h2>Just go with the Flow </h2>
-                <P> Flow is a community mobile app that helps students around the University of Bamenda in Bambili find and locate clean water sources
-                </P>
-                <div class="btn">
-                    <button class="btn"><a href="https://drive.google.com/file/d/1oXVm0yTYVrzsTvPK6gSuuoFBS5v3udCI/view"><div><i class="fab fa-google-play fa-2x"></i></div>  Download now</a></button>
-                    <button class="btn-ios"><i class="fab fa-app-store fa-2x"></i> <div>coming soon on ios</div></button>
+        </nav>
+        <!-- banner -->
+        <section class="app-header" id="home">
+            <div class="app">
+                <div class="app-info">
+                    <h2>Just go with the Flow </h2>
+                    <P> Flow is a community mobile app that helps students around the University of Bamenda in Bambili find and locate clean water sources
+                    </P>
+                    <div class="btn">
+                        <button class="btn"><a href="https://play.google.com/store/apps/details?id=com.team_fluid.flow"><div><i class="fab fa-google-play fa-2x"></i></div>  Download now</a></button>
+                        <button class="btn-ios"><i class="fab fa-app-store fa-2x"></i> <div>coming soon on ios</div></button>
+                    </div>
+                </div>
+                <div class="app-img">
+                    <img src="./img/flow Galaxy S20 Ultra 2.png" alt=" header Img">
                 </div>
             </div>
-            <div class="app-img">
-                <img src="./img/flow Galaxy S20 Ultra 2.png" alt=" header Img">
-            </div>
-        </div>
+        </section>
     </header>
     <main>
+        <!--site title-->
+
+
         <section class="features" id="features">
             <div class="container">
                 <div class="features-title">
@@ -164,6 +170,7 @@
                 </div>
             </div>
         </section>
+
         <section class="contact-us">
             <div class="steps">
                 
@@ -223,6 +230,7 @@
                 
             </div>
         </section>
+
         <section class="team" id="team">
             
             <div class="team">
@@ -252,7 +260,7 @@
                         <h3>Alouzeh Brandone</h3>
                         <p>DataAnalyst</p>
                         <div class="social-links">
-                            <a href="https://github.com/bernadez" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/bernandez" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://twitter.com/AlouzehB" target="_blank"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.linkedin.com/in/alouzeh-mahbuh-a963811ab" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </div>
@@ -286,7 +294,8 @@
                 </div>
             </div>
         </section>
-        <section id="contact-us">
+
+        <section id="contact">
             <div class="contact">
                 <div class="contact-info">
                     <h2>Contact us</h2>
@@ -310,30 +319,21 @@
 
             </div>
         </section>
-
+       
     </main>
+    <!--footer-->
     <footer>
-        <div class="foooter">
-            <p>&#169<a href="#">Google Developer StudentClub UBa</a></p>
-        </div>
+        <footer>
+            <div class="footer">
+                <p>&#169 Copyright 2021 All rights reserved | <a href="#">Google Developer StudentClub UBa</a></p>
+                <p><a href="./privacy policy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
     </footer>
+    <a href="#home" class="scroll-link top-link">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="./js/main.js">
+    </script>
 </body>
-<script>
-    var nav = document.getElementById('navlist');
-    function toggleNav () {       
-        if ( nav.style.display === "" )
-        nav.style.display = "block";
-
-        else
-        nav.style.display = "";
-    }
-    function windowResizeHandler () {
-        if ( screen.width > 500 )
-        nav.style.display = "";
-    }
-    window.addEventListener("resize", windowResizeHandler);
-</script>
-<script src="./jquery3.4.1.min.js"></script>
-    <!--custom js file-->
-    <script src="./main.js"></script>
 </html>
